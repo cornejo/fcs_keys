@@ -47,7 +47,7 @@ jobs:
 
       - name: Check previous release was ok
         run: |
-          num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length
+          num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length`
           echo "Num releases: ${num}"
           if "$num" == "0"; then
             echo "Forcing release"
