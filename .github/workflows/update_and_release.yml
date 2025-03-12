@@ -49,7 +49,7 @@ jobs:
         run: |
           num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length`
           echo "Num releases: ${num}"
-          if [ "$num" = "0" ] ; then
+          if [ "$num" != "1" ] ; then
             echo "Forcing release"
             echo COMMIT_STATUS=success >> $GITHUB_ENV
           fi
@@ -59,6 +59,8 @@ jobs:
         if: env.COMMIT_STATUS == 'success'
         with:
           keep_latest: 0
+          delete_latest: true
+          keep_minimum_releases: 0
           delete_tags: true
 
       - name: Make releases
