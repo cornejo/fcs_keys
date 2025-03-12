@@ -49,7 +49,7 @@ jobs:
         run: |
           num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length`
           echo "Num releases: ${num}"
-          if "$num" == "0"; then
+          if [ "$num" == "0" ] ; then
             echo "Forcing release"
             echo COMMIT_STATUS=success >> $GITHUB_ENV
           fi
