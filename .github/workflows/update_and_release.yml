@@ -47,9 +47,12 @@ jobs:
 
       - name: Check previous release was ok
         run: |
-          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases/latest"
-          files=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases/latest" | jq -r '.assets[].name'`
-          echo "Files are ${files}"
+          num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length
+          echo "Num releases: ${num}"
+          if "$num" == "0"; then
+            echo "Forcing release"
+            echo COMMIT_STATUS=success >> $GITHUB_ENV
+          fi
 
       - name: Delete old releases
         uses: dev-drprasad/delete-older-releases@v0.2.0
