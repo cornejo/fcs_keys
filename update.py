@@ -46,8 +46,7 @@ class FCS_Downloader:
         # Because it's not easy (possible?) to get build id's or versions for devices using ipsw
         # we need to peek into appledb
 
-        # XXX hax (was 10)
-        max_attempts = 2
+        max_attempts = 10
 
         # Initial download and prepopulate the git repo
         subprocess.check_output(["ipsw", "dl", "appledb", "--os", "iOS", "--json"])
