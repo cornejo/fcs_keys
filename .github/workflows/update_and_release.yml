@@ -37,6 +37,9 @@ jobs:
           ./update.py
           git add keys
           git add fcs-keys.json
+          git add iOS_key_log.json
+          git add iPadOS_key_log.json
+          git add macOS_key_log.json
           if git commit -m "Automatic update"; then
             echo COMMIT_STATUS=success >> $GITHUB_ENV
             git push origin HEAD:main
@@ -45,7 +48,7 @@ jobs:
             echo "No changes to commit"
           fi
           # Delete empty directories
-          rmdir keys/*/* || true
+          rmdir keys/*/* || true 2>/dev/null
           tar cjf ../keys.tbz2 keys
           cp fcs-keys.json ..
 
