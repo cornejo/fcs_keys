@@ -48,7 +48,7 @@ jobs:
             echo "No changes to commit"
           fi
           # Delete empty directories
-          rmdir keys/*/* || true 2>/dev/null
+          rmdir keys/*/* 2>/dev/null || true
           tar cjf ../keys.tbz2 keys
           cp fcs-keys.json ..
 
