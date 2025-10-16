@@ -185,6 +185,7 @@ class Key_Updater(BuildIterator):
                             # impression it's only for one file
                             with open(f"{root}/{file}", "rb") as f:
                                 new_filename = hashlib.md5(f.read()).hexdigest()
+                                print(f"Copying {file} to {key_dir}/{new_filename}.pem")
                                 shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
             except Exception:
                 traceback.print_exc()
