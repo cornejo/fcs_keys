@@ -23,6 +23,7 @@ class BuildIterator(ABC):
         oses: list[str] | None = None,
     ):
         self.APPLEDB_DIR = Path("~/.config/ipsw/appledb").expanduser()
+        print(f"Using appledb directory: {self.APPLEDB_DIR}")
 
         SUPPORTED_OSES = ["iOS", "iPadOS", "macOS"]
         if oses is None:
@@ -83,7 +84,7 @@ class BuildIterator(ABC):
                 try:
                     self.download(apple_os, buildid)
                     key_log[buildid] = True
-                except Exception as e:
+                except Exception:
                     traceback.print_exc()
                     key_log[buildid] = val + 1
                     if key_log[buildid] >= self.max_attempts:
@@ -192,11 +193,15 @@ class Key_Updater(BuildIterator):
 
 
 def main():
+    print("Running FCS_Updater...")
     fcs_updater = FCS_Updater()
     fcs_updater.update()
 
+    print("Running Key_Updater...")
     key_updater = Key_Updater()
     key_updater.update()
+
+    print("Finished")
 
 
 if __name__ == "__main__":
