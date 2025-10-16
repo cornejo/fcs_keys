@@ -6,6 +6,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import traceback
 
 from abc import ABC, abstractmethod
 from pathlib import Path
@@ -32,9 +33,13 @@ class BuildIterator(ABC):
 
         if BuildIterator._appledb_present is False:
             try:
-                subprocess.check_output(["ipsw", "dl", "appledb", "--os", "iOS", "--json"])
+                print("Downloading appledb data...")
+                args = ["ipsw", "dl", "appledb", "--os", "iOS", "--json"]
+                print(" ".join(args))
+                subprocess.check_output(args)
                 BuildIterator._appledb_present = True
             except subprocess.CalledProcessError as e:
+                traceback.print_exc()
                 raise Exception("Failed to download appledb data, cannot continue") from e
 
     def _load_keylog(self, apple_os: str) -> dict[str, int | bool]:
@@ -79,7 +84,7 @@ class BuildIterator(ABC):
                     self.download(apple_os, buildid)
                     key_log[buildid] = True
                 except Exception as e:
-                    print(e)
+                    traceback.print_exc()
                     key_log[buildid] = val + 1
                     if key_log[buildid] >= self.max_attempts:
                         key_log[buildid] = False
@@ -109,8 +114,8 @@ class FCS_Updater(BuildIterator):
         apple_os: str,
         buildid: str,
     ):
-        subprocess.check_call(
-            [
+        try:
+            args = [
                 "ipsw",
                 "dl",
                 "appledb",
@@ -122,7 +127,11 @@ class FCS_Updater(BuildIterator):
                 "--verbose",
                 "--confirm",
             ]
-        )
+            print("Running FCS key download:")
+            print(" ".join(args))
+            subprocess.check_call(args)
+        except Exception:
+            traceback.print_exc()
 
     @override
     def cleanup(self):
@@ -148,8 +157,9 @@ class Key_Updater(BuildIterator):
         key_dir = f"{os_dir}/{buildid}"
 
         with tempfile.TemporaryDirectory() as tempdir:
-            subprocess.check_call(
-                [
+            try:
+                print(f"Downloading keys for {apple_os} {buildid} to {tempdir}")
+                args = [
                     "ipsw",
                     "dl",
                     "appledb",
@@ -162,19 +172,22 @@ class Key_Updater(BuildIterator):
                     tempdir,
                     "--confirm",
                 ]
-            )
+                print(" ".join(args))
+                subprocess.check_call(args)
 
-            for root, _dirs, files in os.walk(tempdir):
-                for file in sorted(files):
-                    if file.endswith(".pem"):
-                        os.makedirs(key_dir, exist_ok=True)
-                        # The filename that 'ipsw' has used suggests it only applies to a specific
-                        # .dmg, but it seems to apply to the entire set. So instead we'll store this
-                        # as a hash so that we don't store duplicates and we don't give off the
-                        # impression it's only for one file
-                        with open(f"{root}/{file}", "rb") as f:
-                            new_filename = hashlib.md5(f.read()).hexdigest()
-                            shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
+                for root, _dirs, files in os.walk(tempdir):
+                    for file in sorted(files):
+                        if file.endswith(".pem"):
+                            os.makedirs(key_dir, exist_ok=True)
+                            # The filename that 'ipsw' has used suggests it only applies to a specific
+                            # .dmg, but it seems to apply to the entire set. So instead we'll store this
+                            # as a hash so that we don't store duplicates and we don't give off the
+                            # impression it's only for one file
+                            with open(f"{root}/{file}", "rb") as f:
+                                new_filename = hashlib.md5(f.read()).hexdigest()
+                                shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
+            except Exception:
+                traceback.print_exc()
 
 
 def main():
