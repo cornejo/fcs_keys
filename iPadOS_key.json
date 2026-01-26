@@ -179,6 +179,7 @@
   "19H386": false,
   "19H390": false,
   "19H394": false,
+  "19H402": true,
   "20A5283p": false,
   "20A5303i": false,
   "20A5312g": false,
@@ -240,6 +241,7 @@
   "20H350": false,
   "20H360": false,
   "20H364": false,
+  "20H365": true,
   "21A329": false,
   "21A340": false,
   "21A351": false,
@@ -385,6 +387,7 @@
   "22H124": true,
   "22H20": true,
   "22H217": true,
+  "22H218": true,
   "22H31": true,
   "23A340": true,
   "23A341": true,
@@ -418,6 +421,7 @@
   "23C5044b": true,
   "23C52": true,
   "23C55": true,
+  "23C71": true,
   "23D5089e": true,
   "23D5103d": true
 }
