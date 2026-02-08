@@ -133,6 +133,7 @@ class FCS_Updater(BuildIterator):
             subprocess.check_call(args)
         except Exception:
             traceback.print_exc()
+            raise
 
     @override
     def cleanup(self):
@@ -190,6 +191,7 @@ class Key_Updater(BuildIterator):
                                 shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
             except Exception:
                 traceback.print_exc()
+                raise
 
 
 def main():

@@ -59,23 +59,20 @@ jobs:
             echo COMMIT_STATUS=success >> $GITHUB_ENV
           fi
 
-      - name: Delete old release (manual)
+      - name: Update release tag
         if: env.COMMIT_STATUS == 'success'
         run: |
           set -e
-          release_id=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/tags/v1.0.0 | jq -r .id)
+          COMMIT_SHA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/main" | jq -r .sha)
 
-          if [ "$release_id" != "null" ]; then
-            echo "Deleting existing release ID: $release_id"
-            curl -s -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
-              https://api.github.com/repos/${GITHUB_REPOSITORY}/releases/$release_id
-          fi
-
-          # Delete the tag if it exists
-          curl -s -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
-            https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs/tags/v1.0.0 || true
-
+          # Try to move existing tag, or create it if it doesn't exist
+          curl -s -X PATCH -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs/tags/v1.0.0" \
+            -d "{\"sha\": \"$COMMIT_SHA\", \"force\": true}" || \
+          curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs" \
+            -d "{\"ref\": \"refs/tags/v1.0.0\", \"sha\": \"$COMMIT_SHA\"}"
 
       - name: Make releases
         uses: ncipollo/release-action@v1
@@ -84,6 +81,8 @@ jobs:
           tag: v1.0.0
           name: Current Release
           commit: main
+          allowUpdates: true
+          removeArtifacts: true
           artifacts: |
             keys.tbz2
             fcs-keys.json
