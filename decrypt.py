@@ -175,7 +175,7 @@ def main():
     try:
         extracted_any = False
         for dmg_type in dmg_types:
-            cmd = [
+            cmd: list[str] = [
                 "ipsw",
                 "extract",
                 "--dmg",
