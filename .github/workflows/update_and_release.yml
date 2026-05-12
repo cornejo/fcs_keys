@@ -10,49 +10,103 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      should_update: ${{ steps.decide.outputs.should_update }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for new AppleDB commits or pending retries
+        id: decide
+        run: |
+          set -e
+
+          # Always run on manual trigger
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual trigger, running update"
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Check if the AppleDB submodule has new commits on main
+          REMOTE_SHA=$(git ls-remote https://github.com/littlebyteorg/appledb.git refs/heads/main | cut -f1)
+          LOCAL_SHA=$(git ls-tree HEAD appledb | awk '{print $3}')
+          echo "AppleDB remote: $REMOTE_SHA"
+          echo "AppleDB local:  $LOCAL_SHA"
+
+          if [ "$REMOTE_SHA" != "$LOCAL_SHA" ]; then
+            echo "AppleDB has new commits"
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Check tracking JSONs for incomplete attempts (integer values = still retrying)
+          if python3 -c '
+          import json, sys
+          for f in ["iOS_fcs.json","iOS_key.json","iPadOS_fcs.json","iPadOS_key.json","macOS_fcs.json","macOS_key.json"]:
+              try:
+                  data = json.load(open(f))
+                  if any(isinstance(v, int) for v in data.values()):
+                      sys.exit(1)
+              except FileNotFoundError:
+                  pass
+          '; then
+            echo "No new commits and no pending retries, skipping"
+            echo "should_update=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Pending retries found"
+            echo "should_update=true" >> "$GITHUB_OUTPUT"
+          fi
+
   update-keys-and-release:
+    needs: check
+    if: needs.check.outputs.should_update == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    container:
-      image: blacktop/ipsw
-      options: --workdir /github/workspace -v ${{ github.workspace }}:/github/workspace
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - name: Install dependencies
-        run: |
-          apt-get update
-          apt-get install -y curl git jq python3 python3-pip
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
 
-      - name: Get new keys and commit
-        working-directory: /github/workspace
+      - name: Install ipsw
+        run: |
+          set -e
+          IPSW_URL=$(curl -s https://api.github.com/repos/blacktop/ipsw/releases/latest \
+            | jq -r '.assets[] | select(.name | test("ipsw_.*_linux_x86_64\\.tar\\.gz$")) | .browser_download_url')
+          curl -sL "$IPSW_URL" | sudo tar xz -C /usr/local/bin ipsw
+          ipsw version
+
+      - name: Update submodule and get new keys
         run: |
           set -ex
-          ipsw version
-          git clone https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          cd `basename ${GITHUB_REPOSITORY}`
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git -C appledb checkout -B main origin/main
+          git -C appledb pull
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           ./update.py
-          git add keys
-          git add *.json
-          if git commit -am "Automatic update"; then
+          git add keys *.json appledb
+          if git commit -m "Automatic update"; then
             echo COMMIT_STATUS=success >> $GITHUB_ENV
             git push origin HEAD:main
           else
             echo COMMIT_STATUS=failure >> $GITHUB_ENV
             echo "No changes to commit"
           fi
-          # Delete empty directories
+
+      - name: Package release artifacts
+        run: |
           rmdir keys/*/* 2>/dev/null || true
-          tar cjf ../keys.tbz2 keys
-          cp fcs-keys.json ..
+          tar cjf keys.tbz2 keys
 
       - name: Check previous release was ok
         run: |
-          num=`curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/releases" | jq length`
+          num=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/releases" | jq length)
           echo "Num releases: ${num}"
           if [ "$num" != "1" ] ; then
             echo "Forcing release"
@@ -66,7 +120,6 @@ jobs:
           COMMIT_SHA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/main" | jq -r .sha)
 
-          # Try to move existing tag, or create it if it doesn't exist
           curl -s -X PATCH -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/refs/tags/v1.0.0" \
             -d "{\"sha\": \"$COMMIT_SHA\", \"force\": true}" || \
