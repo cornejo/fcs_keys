@@ -14,7 +14,7 @@ from typing import override
 
 
 class BuildIterator(ABC):
-    _appledb_present: bool = False
+    _appledb_setup: bool = False
 
     def __init__(
         self,
@@ -32,16 +32,26 @@ class BuildIterator(ABC):
         self.max_attempts = max_attempts
         self.oses = oses
 
-        if BuildIterator._appledb_present is False:
-            try:
-                print("Downloading appledb data...")
-                args = ["ipsw", "dl", "appledb", "--os", "iOS", "--json"]
-                print(" ".join(args))
-                subprocess.check_output(args)
-                BuildIterator._appledb_present = True
-            except subprocess.CalledProcessError as e:
-                traceback.print_exc()
-                raise Exception("Failed to download appledb data, cannot continue") from e
+        if BuildIterator._appledb_setup is False:
+            submodule_dir = Path(__file__).resolve().parent / "appledb"
+            if submodule_dir.is_dir() and (submodule_dir / "osFiles").is_dir():
+                self.APPLEDB_DIR.parent.mkdir(parents=True, exist_ok=True)
+                if self.APPLEDB_DIR.is_symlink() or self.APPLEDB_DIR.is_file():
+                    self.APPLEDB_DIR.unlink()
+                elif self.APPLEDB_DIR.is_dir():
+                    shutil.rmtree(self.APPLEDB_DIR)
+                self.APPLEDB_DIR.symlink_to(submodule_dir)
+                print(f"Symlinked {self.APPLEDB_DIR} -> {submodule_dir}")
+            else:
+                try:
+                    print("No local appledb submodule found, downloading...")
+                    args = ["ipsw", "dl", "appledb", "--os", "iOS", "--json"]
+                    print(" ".join(args))
+                    subprocess.check_output(args)
+                except subprocess.CalledProcessError as e:
+                    traceback.print_exc()
+                    raise Exception("Failed to download appledb data, cannot continue") from e
+            BuildIterator._appledb_setup = True
 
     def _load_keylog(self, apple_os: str) -> dict[str, int | bool]:
         # Format is
