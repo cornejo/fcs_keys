@@ -47,7 +47,7 @@ jobs:
           for f in ["iOS_fcs.json","iOS_key.json","iPadOS_fcs.json","iPadOS_key.json","macOS_fcs.json","macOS_key.json"]:
               try:
                   data = json.load(open(f))
-                  if any(isinstance(v, int) for v in data.values()):
+                  if any(isinstance(v, int) and not isinstance(v, bool) for v in data.values()):
                       sys.exit(1)
               except FileNotFoundError:
                   pass
