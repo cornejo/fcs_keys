@@ -34,14 +34,21 @@ class BuildIterator(ABC):
 
         if BuildIterator._appledb_setup is False:
             submodule_dir = Path(__file__).resolve().parent / "appledb"
+            print(f"Checking for local appledb at: {submodule_dir}")
+            print(f"  is_dir: {submodule_dir.is_dir()}, has osFiles: {(submodule_dir / 'osFiles').is_dir()}")
             if submodule_dir.is_dir() and (submodule_dir / "osFiles").is_dir():
                 self.APPLEDB_DIR.parent.mkdir(parents=True, exist_ok=True)
                 if self.APPLEDB_DIR.is_symlink() or self.APPLEDB_DIR.is_file():
                     self.APPLEDB_DIR.unlink()
                 elif self.APPLEDB_DIR.is_dir():
                     shutil.rmtree(self.APPLEDB_DIR)
-                self.APPLEDB_DIR.symlink_to(submodule_dir)
-                print(f"Symlinked {self.APPLEDB_DIR} -> {submodule_dir}")
+                print(f"Cloning {submodule_dir} -> {self.APPLEDB_DIR} (local shallow clone)...")
+                subprocess.check_call([
+                    "git", "clone", "--depth", "1",
+                    f"file://{submodule_dir}", str(self.APPLEDB_DIR),
+                ])
+                os_dirs = list((self.APPLEDB_DIR / "osFiles").iterdir())
+                print(f"Clone complete. osFiles contains: {[d.name for d in os_dirs if d.is_dir()]}")
             else:
                 try:
                     print("No local appledb submodule found, downloading...")
@@ -74,8 +81,12 @@ class BuildIterator(ABC):
 
         for apple_os in self.oses:
             key_log = self._load_keylog(apple_os)
+            prev_count = len(key_log)
 
-            for _root, _dirs, files in os.walk(self.APPLEDB_DIR / "osFiles" / apple_os):
+            os_path = self.APPLEDB_DIR / "osFiles" / apple_os
+            print(f"[{self.name}] Scanning {os_path} for {apple_os} builds...")
+            new_builds = []
+            for _root, _dirs, files in os.walk(os_path):
                 for f in files:
                     if f.endswith(".json"):
                         appledb_found = True
@@ -83,24 +94,32 @@ class BuildIterator(ABC):
 
                         if buildid not in key_log:
                             key_log[buildid] = 0
+                            new_builds.append(buildid)
+
+            pending = {k: v for k, v in key_log.items() if isinstance(v, int) and not isinstance(v, bool)}
+            print(f"[{self.name}] {apple_os}: {len(key_log)} total builds ({len(key_log) - prev_count} new), {len(pending)} pending")
+            if new_builds:
+                print(f"[{self.name}] New builds: {new_builds}")
 
             for buildid in key_log:
                 val = key_log[buildid]
                 if isinstance(val, bool):
-                    # Already succeeded/failed
                     continue
 
-                print(f"Trying {buildid} for {apple_os}, attempt {val + 1}/{self.max_attempts}")
+                print(f"[{self.name}] Trying {buildid} for {apple_os}, attempt {val + 1}/{self.max_attempts}")
                 try:
                     self.download(apple_os, buildid)
                     key_log[buildid] = True
+                    print(f"[{self.name}] SUCCESS: {buildid} for {apple_os}")
                 except Exception:
                     traceback.print_exc()
                     key_log[buildid] = val + 1
                     if key_log[buildid] >= self.max_attempts:
                         key_log[buildid] = False
+                        print(f"[{self.name}] FAILED: {buildid} for {apple_os} (max attempts reached)")
+                    else:
+                        print(f"[{self.name}] RETRY: {buildid} for {apple_os} (attempt {key_log[buildid]}/{self.max_attempts})")
 
-                # Save immediately on mutate
                 self._save_keylog(apple_os, key_log)
 
         if appledb_found is False:
@@ -125,6 +144,9 @@ class FCS_Updater(BuildIterator):
         apple_os: str,
         buildid: str,
     ):
+        fcs_path = Path("fcs-keys.json")
+        before = fcs_path.read_bytes() if fcs_path.exists() else b""
+
         try:
             args = [
                 "ipsw",
@@ -140,10 +162,23 @@ class FCS_Updater(BuildIterator):
             ]
             print("Running FCS key download:")
             print(" ".join(args))
-            subprocess.check_call(args)
+            result = subprocess.run(args, capture_output=True, text=True)
+            if result.stdout:
+                print(f"[ipsw stdout] {result.stdout}")
+            if result.stderr:
+                print(f"[ipsw stderr] {result.stderr}")
+            if result.returncode != 0:
+                raise subprocess.CalledProcessError(result.returncode, args)
         except Exception:
             traceback.print_exc()
             raise
+
+        after = fcs_path.read_bytes() if fcs_path.exists() else b""
+        if before == after:
+            if "no results found for query" in result.stderr:
+                print(f"No IPSW sources found for {apple_os} {buildid} (build may not have FCS keys for this OS)")
+            else:
+                raise Exception(f"ipsw exited 0 but fcs-keys.json was not modified for {apple_os} {buildid}")
 
     @override
     def cleanup(self):
@@ -185,26 +220,42 @@ class Key_Updater(BuildIterator):
                     "--confirm",
                 ]
                 print(" ".join(args))
-                subprocess.check_call(args)
+                result = subprocess.run(args, capture_output=True, text=True)
+                if result.stdout:
+                    print(f"[ipsw stdout] {result.stdout}")
+                if result.stderr:
+                    print(f"[ipsw stderr] {result.stderr}")
+                if result.returncode != 0:
+                    raise subprocess.CalledProcessError(result.returncode, args)
 
+                found_pem = False
                 for root, _dirs, files in os.walk(tempdir):
                     for file in sorted(files):
                         if file.endswith(".pem"):
+                            found_pem = True
                             os.makedirs(key_dir, exist_ok=True)
-                            # The filename that 'ipsw' has used suggests it only applies to a specific
-                            # .dmg, but it seems to apply to the entire set. So instead we'll store this
-                            # as a hash so that we don't store duplicates and we don't give off the
-                            # impression it's only for one file
                             with open(f"{root}/{file}", "rb") as f:
                                 new_filename = hashlib.md5(f.read()).hexdigest()
                                 print(f"Copying {file} to {key_dir}/{new_filename}.pem")
                                 shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
+
+                if not found_pem:
+                    if "no results found for query" in result.stderr:
+                        print(f"No IPSW sources found for {apple_os} {buildid} (build may not have keys for this OS)")
+                    else:
+                        raise Exception(f"ipsw exited 0 but no .pem files produced for {apple_os} {buildid}")
             except Exception:
                 traceback.print_exc()
                 raise
 
 
 def main():
+    try:
+        ver = subprocess.check_output(["ipsw", "version"], stderr=subprocess.STDOUT).decode().strip()
+        print(f"ipsw version: {ver}")
+    except Exception as e:
+        print(f"WARNING: Could not get ipsw version: {e}")
+
     print("Running FCS_Updater...")
     fcs_updater = FCS_Updater()
     fcs_updater.update()
