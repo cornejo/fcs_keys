@@ -144,41 +144,58 @@ class FCS_Updater(BuildIterator):
         apple_os: str,
         buildid: str,
     ):
-        fcs_path = Path("fcs-keys.json")
-        before = fcs_path.read_bytes() if fcs_path.exists() else b""
+        with tempfile.TemporaryDirectory() as tempdir:
+            temp_fcs = Path(tempdir) / "fcs-keys.json"
+            try:
+                args = [
+                    "ipsw",
+                    "dl",
+                    "appledb",
+                    "--os",
+                    apple_os,
+                    "--build",
+                    buildid,
+                    "--fcs-keys-json",
+                    "--output",
+                    tempdir,
+                    "--verbose",
+                    "--confirm",
+                ]
+                print("Running FCS key download:")
+                print(" ".join(args))
+                result = subprocess.run(args, capture_output=True, text=True)
+                if result.stdout:
+                    print(f"[ipsw stdout] {result.stdout}")
+                if result.stderr:
+                    print(f"[ipsw stderr] {result.stderr}")
+                if result.returncode != 0:
+                    raise subprocess.CalledProcessError(result.returncode, args)
+            except Exception:
+                traceback.print_exc()
+                raise
 
-        try:
-            args = [
-                "ipsw",
-                "dl",
-                "appledb",
-                "--os",
-                apple_os,
-                "--build",
-                buildid,
-                "--fcs-keys-json",
-                "--verbose",
-                "--confirm",
-            ]
-            print("Running FCS key download:")
-            print(" ".join(args))
-            result = subprocess.run(args, capture_output=True, text=True)
-            if result.stdout:
-                print(f"[ipsw stdout] {result.stdout}")
-            if result.stderr:
-                print(f"[ipsw stderr] {result.stderr}")
-            if result.returncode != 0:
-                raise subprocess.CalledProcessError(result.returncode, args)
-        except Exception:
-            traceback.print_exc()
-            raise
+            if not temp_fcs.exists():
+                if "no results found for query" in result.stderr:
+                    print(f"No IPSW sources found for {apple_os} {buildid} (build may not have FCS keys for this OS)")
+                    return
+                raise Exception(f"ipsw exited 0 but no fcs-keys.json produced for {apple_os} {buildid}")
 
-        after = fcs_path.read_bytes() if fcs_path.exists() else b""
-        if before == after:
-            if "no results found for query" in result.stderr:
-                print(f"No IPSW sources found for {apple_os} {buildid} (build may not have FCS keys for this OS)")
-            else:
-                raise Exception(f"ipsw exited 0 but fcs-keys.json was not modified for {apple_os} {buildid}")
+            with open(temp_fcs) as f:
+                new_keys = json.load(f)
+            print(f"Got {len(new_keys)} key(s) for {apple_os} {buildid}")
+
+            master_path = Path("fcs-keys.json")
+            master_keys = {}
+            if master_path.exists():
+                with open(master_path) as f:
+                    master_keys = json.load(f)
+
+            before_count = len(master_keys)
+            master_keys.update(new_keys)
+            print(f"Merged into master: {before_count} -> {len(master_keys)} keys")
+
+            with open(master_path, "w") as f:
+                json.dump(master_keys, f, sort_keys=True, indent=2)
 
     @override
     def cleanup(self):

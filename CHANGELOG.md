@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-01 (2)
+
+### Fixed
+- FCS key validation false failures when iPadOS/iOS share the same keys
+- ipsw now writes to a temp file; keys are merged into the master `fcs-keys.json` so duplicates are handled silently
+
 ## 2026-06-01
 
 ### Fixed
