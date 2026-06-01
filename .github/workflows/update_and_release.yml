@@ -90,11 +90,17 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           ./update.py
           git add keys *.json appledb
+          # Only trigger a release if actual key data changed, not just the submodule ref
+          if git diff --cached --quiet -- keys/ fcs-keys.json; then
+            echo "No key changes"
+            echo RELEASE=false >> $GITHUB_ENV
+          else
+            echo "Key data changed, will release"
+            echo RELEASE=true >> $GITHUB_ENV
+          fi
           if git commit -m "Automatic update"; then
-            echo COMMIT_STATUS=success >> $GITHUB_ENV
             git push origin HEAD:main
           else
-            echo COMMIT_STATUS=failure >> $GITHUB_ENV
             echo "No changes to commit"
           fi
 
@@ -110,11 +116,11 @@ jobs:
           echo "Num releases: ${num}"
           if [ "$num" != "1" ] ; then
             echo "Forcing release"
-            echo COMMIT_STATUS=success >> $GITHUB_ENV
+            echo RELEASE=true >> $GITHUB_ENV
           fi
 
       - name: Update release tag
-        if: env.COMMIT_STATUS == 'success'
+        if: env.RELEASE == 'true'
         run: |
           set -e
           COMMIT_SHA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
@@ -129,7 +135,7 @@ jobs:
 
       - name: Make releases
         uses: ncipollo/release-action@v1
-        if: env.COMMIT_STATUS == 'success'
+        if: env.RELEASE == 'true'
         with:
           tag: v1.0.0
           name: Current Release
