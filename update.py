@@ -175,7 +175,10 @@ class FCS_Updater(BuildIterator):
 
         after = fcs_path.read_bytes() if fcs_path.exists() else b""
         if before == after:
-            raise Exception(f"ipsw exited 0 but fcs-keys.json was not modified for {apple_os} {buildid}")
+            if "no results found for query" in result.stderr:
+                print(f"No IPSW sources found for {apple_os} {buildid} (build may not have FCS keys for this OS)")
+            else:
+                raise Exception(f"ipsw exited 0 but fcs-keys.json was not modified for {apple_os} {buildid}")
 
     @override
     def cleanup(self):
@@ -237,7 +240,10 @@ class Key_Updater(BuildIterator):
                                 shutil.copy(f"{root}/{file}", f"{key_dir}/{new_filename}.pem")
 
                 if not found_pem:
-                    raise Exception(f"ipsw exited 0 but no .pem files produced for {apple_os} {buildid}")
+                    if "no results found for query" in result.stderr:
+                        print(f"No IPSW sources found for {apple_os} {buildid} (build may not have keys for this OS)")
+                    else:
+                        raise Exception(f"ipsw exited 0 but no .pem files produced for {apple_os} {buildid}")
             except Exception:
                 traceback.print_exc()
                 raise
