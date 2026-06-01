@@ -42,10 +42,13 @@ class BuildIterator(ABC):
                     self.APPLEDB_DIR.unlink()
                 elif self.APPLEDB_DIR.is_dir():
                     shutil.rmtree(self.APPLEDB_DIR)
-                print(f"Copying {submodule_dir} -> {self.APPLEDB_DIR} (excluding .git)...")
-                shutil.copytree(submodule_dir, self.APPLEDB_DIR, ignore=shutil.ignore_patterns('.git'))
+                print(f"Cloning {submodule_dir} -> {self.APPLEDB_DIR} (local shallow clone)...")
+                subprocess.check_call([
+                    "git", "clone", "--depth", "1",
+                    f"file://{submodule_dir}", str(self.APPLEDB_DIR),
+                ])
                 os_dirs = list((self.APPLEDB_DIR / "osFiles").iterdir())
-                print(f"Copy complete. osFiles contains: {[d.name for d in os_dirs if d.is_dir()]}")
+                print(f"Clone complete. osFiles contains: {[d.name for d in os_dirs if d.is_dir()]}")
             else:
                 try:
                     print("No local appledb submodule found, downloading...")
