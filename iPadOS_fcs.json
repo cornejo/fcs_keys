@@ -402,6 +402,7 @@
   "22H352": true,
   "22H355": true,
   "22H373": true,
+  "22H374": true,
   "23A22140s": true,
   "23A249e": true,
   "23A256": true,
@@ -474,10 +475,12 @@
   "23G5065a": true,
   "23G71": true,
   "23G82": true,
+  "23G83": true,
   "24A5355q": true,
   "24A5370h": true,
   "24A5380h": true,
   "24A5380l": true,
   "24A5390f": true,
-  "24A5408d": true
+  "24A5408d": true,
+  "24A5418b": true
 }
