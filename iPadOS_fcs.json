@@ -488,8 +488,11 @@
   "24A324b": false,
   "24A332": false,
   "24A337": false,
+  "24A391": false,
+  "24A400": false,
   "24A435": true,
   "24A437": true,
+  "24A445": false,
   "24A446": true,
   "24A5355q": true,
   "24A5370h": true,
@@ -500,10 +503,13 @@
   "24A5418b": true,
   "24A5424a": true,
   "24A5430a": true,
+  "24A7427": false,
   "24B115": true,
   "24B119": true,
   "24B5084k": true,
   "24B5089g": true,
   "24B5099f": true,
-  "24B5110a": false
+  "24B5110a": false,
+  "24B8120": false,
+  "24C5037i": true
 }
