@@ -1304,7 +1304,8 @@
   {
     "build": "24K6157",
     "devices": [
-      "AppleTV14,1"
+      "AppleTV14,1",
+      "AppleTV14,1-wifi"
     ],
     "documentation_id": "PreRelease",
     "filename": "006fb8b059d73cbef8e286d6a8337a42e5e7d100a41c095d4a4ed250a8a15b10.aea",
@@ -3771,6 +3772,17 @@
     "key": "LEYQUEvIfWIz27GSvVYhWv+QRvQFroxmQlhSTl98FxI=",
     "url": "https://updates.cdn-apple.com/2025SummerSeed/mobileassets/093-17019/5F866D43-D22B-4844-9B04-278E30C1791A/com_apple_MobileAsset_SoftwareUpdate/02cbb2a71725770025ceb23d7d294f992cebe83c40258c5ef66efa6a4a05c386.aea",
     "version": "26.0 beta 6"
+  },
+  {
+    "build": "24K157",
+    "devices": [
+      "AudioAccessory6,1",
+      "AudioAccessory6,1-CHN"
+    ],
+    "filename": "02cbdfd8ac22d045eff7c414e60f3b19a63066547462f8c292b04b8947adfa96.aea",
+    "key": "foyYcCcOj2nVLbqBoFXn7zST1hfX0aBzYBKDy3TOn8E=",
+    "url": "https://updates.cdn-apple.com/2026FallFCS/8e5c8988-182d-4d43-8cd7-aefc634966f1/com_apple_MobileAsset_SoftwareUpdate/02cbdfd8ac22d045eff7c414e60f3b19a63066547462f8c292b04b8947adfa96.aea",
+    "version": "27.2.1"
   },
   {
     "build": "23D5103d",
@@ -14517,6 +14529,17 @@
     "os": "iOS",
     "size": 3686178816,
     "url": "https://updates.cdn-apple.com/2026FallFCS/8ef6fa08-d1a3-444e-8cf8-124c8e860365/com_apple_MobileAsset_SoftwareUpdate/8a06a495b25b3826d744377ae13e7e315d519f5e16fb615e726b8d144cb6b791.aea",
+    "version": "27.2.1"
+  },
+  {
+    "build": "24K157",
+    "devices": [
+      "AudioAccessory6,1",
+      "AudioAccessory6,1-CHN"
+    ],
+    "filename": "8a126c140ebf61137baa28d7d66d0a21f8be89c04872c9ec9dbaf9114df9fc63.aea",
+    "key": "wepV05IXdosNrXWGCB0LOq/nCTNtLbDqgW75ySDFx1w=",
+    "url": "https://updates.cdn-apple.com/2026FallFCS/2e780820-035d-4c05-a04c-35ec887e2ad9/com_apple_MobileAsset_RecoveryOSUpdate/8a126c140ebf61137baa28d7d66d0a21f8be89c04872c9ec9dbaf9114df9fc63.aea",
     "version": "27.2.1"
   },
   {
