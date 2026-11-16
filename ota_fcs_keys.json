@@ -4015,6 +4015,17 @@
     "version": "18.1"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AudioAccessory5,1",
+      "AudioAccessory5,1-CHN"
+    ],
+    "filename": "03523c593fd82e0e492bac0323139fa7031231f606fce2ea6147ff26ee6d6348.aea",
+    "key": "KMJcHkiH26UsHF3lnOjw86zLq790d6vfhwC2Mrz1LC8=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/d65c7a46-6bfc-40da-a070-0da396ca85a2/com_apple_MobileAsset_SoftwareUpdate/03523c593fd82e0e492bac0323139fa7031231f606fce2ea6147ff26ee6d6348.aea",
+    "version": "27.3 beta 2"
+  },
+  {
     "build": "22A5316k",
     "devices": [
       "iPad14,5"
@@ -6596,6 +6607,23 @@
     "version": "26.6 beta 5"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV14,1",
+      "AppleTV14,1-wifi"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "0d3c4efdd5ae1614c774c99015d792445d9e95e5ea9121f44afbba825de65e19.aea",
+    "key": "KMolC18qSt+Jnnxkqks4jKk1kFrH6HMvyikpESVHh6U=",
+    "models": [
+      "J255AP"
+    ],
+    "os": "iOS",
+    "size": 1727275008,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/4c2dfb5b-5c94-4233-8ee0-d66891532e6a/com_apple_MobileAsset_SoftwareUpdate/0d3c4efdd5ae1614c774c99015d792445d9e95e5ea9121f44afbba825de65e19.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24A5355q",
     "devices": [
       "iPad16,3",
@@ -7581,6 +7609,17 @@
     "key": "jq8Vkjeznttb2Odthn9TERJlFR/YilQJofvuNmmnMcw=",
     "url": "https://updates.cdn-apple.com/2024SummerSeed/mobileassets/062-58701/2730920A-0F28-49C3-9BC1-AD6F7950EE0D/com_apple_MobileAsset_SoftwareUpdate/13586963ead2ca371a2469c66b78a6fcebed99a1f89ea42aa3ee3a7ab6a8f8c5.aea",
     "version": "18.0 beta 6"
+  },
+  {
+    "build": "24K5298d",
+    "devices": [
+      "AudioAccessory6,1",
+      "AudioAccessory6,1-CHN"
+    ],
+    "filename": "137850f4a38a43150579b4a33d9f322c80d7266676fe0e4243d0c8fbdb129858.aea",
+    "key": "HRvFpWqcr+9v6o0Oob8MVhw8q21Mmu0SdMfGDFyhna4=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/d18ffd0c-a6e2-4c8d-87b4-64a8a52c4390/com_apple_MobileAsset_RecoveryOSUpdate/137850f4a38a43150579b4a33d9f322c80d7266676fe0e4243d0c8fbdb129858.aea",
+    "version": "27.3 beta 2"
   },
   {
     "build": "23L5758b",
@@ -11865,6 +11904,22 @@
     "version": "26.0 beta 2"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV14,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "44704febc33689a2d29ff1ba426497e01f3f956de0dd65ed8dfee7916648d714.aea",
+    "key": "/vLJmpe5N8Klh1bkJ1ajPo4zsFk8DdTgnq5JxTJZHDY=",
+    "models": [
+      "J255AP"
+    ],
+    "os": "iOS",
+    "size": 4994736128,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/28af20db-de7b-4925-8bee-0b80992cc039/com_apple_MobileAsset_SoftwareUpdate/44704febc33689a2d29ff1ba426497e01f3f956de0dd65ed8dfee7916648d714.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24S5296d",
     "devices": [
       "Watch7,2"
@@ -14792,6 +14847,22 @@
     "version": "27.2"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV11,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "843282e3dcaa2df510bedd721f3925327adba69c941fde2a638239d504399469.aea",
+    "key": "wPDkgS07aUWDS0KHSV83h3AZsEjPoZcjA8OejElolYA=",
+    "models": [
+      "J305AP"
+    ],
+    "os": "iOS",
+    "size": 4829716480,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/c5c7e69f-f3ef-4e78-8637-6ae00df0f58c/com_apple_MobileAsset_SoftwareUpdate/843282e3dcaa2df510bedd721f3925327adba69c941fde2a638239d504399469.aea",
+    "version": "27.3"
+  },
+  {
     "build": "22O237",
     "devices": [
       "RealityDevice14,1"
@@ -15642,6 +15713,22 @@
     "version": "27.0 beta 5"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV18,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "997db31302500bf3b64ec831cfc99c491f05e5e93f81fd46295efd13de0ea230.aea",
+    "key": "KqzAxSolhO3/dvSMvxZgz6ww/HpYd2qTzPnh3ih74Hg=",
+    "models": [
+      "J265AP"
+    ],
+    "os": "iOS",
+    "size": 5423947776,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/82d99350-06b7-4082-85ac-802b5117ddab/com_apple_MobileAsset_SoftwareUpdate/997db31302500bf3b64ec831cfc99c491f05e5e93f81fd46295efd13de0ea230.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24M5359a",
     "devices": [
       "RealityDevice17,1"
@@ -16132,6 +16219,20 @@
     "size": 4287152128,
     "url": "https://updates.cdn-apple.com/2026FallFCS/aa6857e6-350a-46fd-8339-8993bc6b4600/com_apple_MobileAsset_SoftwareUpdate/a2f80c3de94470a68e18cd981a328c887d75c4c981d9ff0da7b33b1a5fbd2254.aea",
     "version": "27.2.1"
+  },
+  {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV18,1"
+    ],
+    "filename": "a38f465cd8d6a469fad2d9848f335eb10aeecee30b9337873a3487383fbbfa42.aea",
+    "key": "GspdNQnD1Nbj3BwpISyz4U8ONcIIFR8h3dUIa6Y9wVI=",
+    "models": [
+      "J265AP"
+    ],
+    "size": 317554688,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/9b8501b0-4dce-40dd-bb95-816a433741ed/com_apple_MobileAsset_RecoveryOSUpdate/a38f465cd8d6a469fad2d9848f335eb10aeecee30b9337873a3487383fbbfa42.aea",
+    "version": "27.3"
   },
   {
     "build": "24K122",
@@ -16975,6 +17076,22 @@
     "version": "26.6.1"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV11,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "ba3faf76df2d3109d5da7a13c20bb0783195f252c81b144f7d1751b9fb9f256d.aea",
+    "key": "0s7sFex71bTTQAwtVWFUHXsR+8Qik2yYcU6Exy9G9Rs=",
+    "models": [
+      "J305AP"
+    ],
+    "os": "iOS",
+    "size": 1027256320,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/ae65b077-1243-44b0-abaf-1e69672c4e07/com_apple_MobileAsset_SoftwareUpdate/ba3faf76df2d3109d5da7a13c20bb0783195f252c81b144f7d1751b9fb9f256d.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24B156",
     "devices": [
       "iPad15,7"
@@ -17717,6 +17834,22 @@
     "version": "27.2 RC"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV11,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "d43508e73300a345a69522a4538db0dfc69c1a64403f8324214458b3b7869b82.aea",
+    "key": "ytjoBcOi+KsQZgMS+akNfhzCztiCcM6bvQ+756wN9RY=",
+    "models": [
+      "J305AP"
+    ],
+    "os": "iOS",
+    "size": 1715970048,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/46c5b7ed-0fec-4272-894c-154718617571/com_apple_MobileAsset_SoftwareUpdate/d43508e73300a345a69522a4538db0dfc69c1a64403f8324214458b3b7869b82.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24K154",
     "devices": [
       "AppleTV18,1"
@@ -18438,6 +18571,20 @@
     "version": "27.2 beta 3"
   },
   {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV14,1"
+    ],
+    "filename": "e54ba2c6c68dcfa898c367ca9a216bd1393814f57245973ea676ce675297d426.aea",
+    "key": "rRD4r1QRgvjyHyeMCEikzooZKdHhMBrpZH8uNC+VLt8=",
+    "models": [
+      "J255AP"
+    ],
+    "size": 261353472,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/a7c54207-f6c7-4001-8572-47b42a63e47a/com_apple_MobileAsset_RecoveryOSUpdate/e54ba2c6c68dcfa898c367ca9a216bd1393814f57245973ea676ce675297d426.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24S5284h",
     "devices": [
       "Watch7,19"
@@ -18515,6 +18662,20 @@
     "os": "iOS",
     "size": 10105237504,
     "url": "https://updates.cdn-apple.com/2026FallSeed/d065f7ae-f4e1-4513-9bb9-cab0ee4dfd35/com_apple_MobileAsset_SoftwareUpdate/e7c8a08dd72d428dd1ea13a2ffb3da448ebece31c383a894eb47efad42709510.aea",
+    "version": "27.3"
+  },
+  {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV11,1"
+    ],
+    "filename": "e816df1d9e52d5b3abe5e3fe012f9bebc35c7b1afbbff7eb9482560a42bb890a.aea",
+    "key": "+UUTyNNSWidFLJIDrR2Zg7jjUeU27JOskGyzIfjXHs0=",
+    "models": [
+      "J305AP"
+    ],
+    "size": 255676416,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/f3a5e7db-1049-4374-81d3-a13056c8eae2/com_apple_MobileAsset_RecoveryOSUpdate/e816df1d9e52d5b3abe5e3fe012f9bebc35c7b1afbbff7eb9482560a42bb890a.aea",
     "version": "27.3"
   },
   {
@@ -19194,6 +19355,22 @@
     "size": 8188747776,
     "url": "https://updates.cdn-apple.com/2026FallFCS/915864b9-4213-478b-8aaf-2f472f6cac17/com_apple_MobileAsset_SoftwareUpdate/fdf05440162623bdef8ceb235b441295d6ff9c9c394baebb2c4e13ffc0895a2c.aea",
     "version": "26.7.3"
+  },
+  {
+    "build": "24K5298d",
+    "devices": [
+      "AppleTV14,1"
+    ],
+    "documentation_id": "PreRelease",
+    "filename": "fe65b8390db8de2ce0e9dbf91e739f71db324617442bdb511c5d6e4a6fa2f87a.aea",
+    "key": "GBzeFOd/4GZJehnmhZezOZhpIkeSUrmOtQ7R8IXp9bc=",
+    "models": [
+      "J255AP"
+    ],
+    "os": "iOS",
+    "size": 1035251712,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/e3386674-0e6b-4b38-9e1b-7e8cbec54f91/com_apple_MobileAsset_SoftwareUpdate/fe65b8390db8de2ce0e9dbf91e739f71db324617442bdb511c5d6e4a6fa2f87a.aea",
+    "version": "27.3"
   },
   {
     "build": "23U95",
