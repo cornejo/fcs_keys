@@ -6788,6 +6788,19 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049d",
+    "devices": [
+      "iPad16,3",
+      "iPad16,4",
+      "iPad16,5",
+      "iPad16,6"
+    ],
+    "filename": "0e27ef9cff386285b95438136cdd18117ddbbffc03b848a327be51ae63b868ba.aea",
+    "key": "DNiuW91LwxwA8uqLJJ1WD3WFATgpGkWHa1FXgIZHs88=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/b17607b1-abf1-4bc9-82ae-8ab6ff0b9fa7/com_apple_MobileAsset_RecoveryOSUpdate/0e27ef9cff386285b95438136cdd18117ddbbffc03b848a327be51ae63b868ba.aea",
+    "version": "27.3 beta 2"
+  },
+  {
     "build": "22D5040d",
     "devices": [
       "iPhone17,4"
@@ -7827,6 +7840,16 @@
     "key": "4fQ33deqnQ7a+q9WFijPaune/rMs0AH5NSGf+AOjdjM=",
     "url": "https://updates.cdn-apple.com/2026FallFCS/c371d7f3-3cd7-4231-9b21-ba91f8e645e2/com_apple_MobileAsset_SoftwareUpdate/1465cf9be47e81297ddf84ac58447437deb1065608c24bbb685004c09ac8a3bc.aea",
     "version": "27.0 RC"
+  },
+  {
+    "build": "24S5296d",
+    "devices": [
+      "Watch7,3"
+    ],
+    "filename": "146d48c16df93bcb840008106ae1206b4aaf33996be7c2bfe18211b2f221158c.aea",
+    "key": "565hceLzpBtw2MAn65jAHbTGuhzn4ydmgbDvCRFFhAg=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/8336620e-39b8-4405-b7e2-7afa78a6ebc2/com_apple_MobileAsset_RecoveryOSUpdate/146d48c16df93bcb840008106ae1206b4aaf33996be7c2bfe18211b2f221158c.aea",
+    "version": "27.3 beta 2"
   },
   {
     "build": "24E248",
@@ -8889,6 +8912,16 @@
     "key": "v24oulWSrBaXmoo+FaNk1cx94KTTLdDgBZazTTeyReM=",
     "url": "https://updates.cdn-apple.com/2024FallSeed/mobileassets/062-69722/6C0CB00B-EA20-499D-A0F8-FFCAD2F7B759/com_apple_MobileAsset_SoftwareUpdate/1d0a21cac676031799fe6ed6451a79e57d2b915884479fd750968147fdf7872d.aea",
     "version": "18.1 beta"
+  },
+  {
+    "build": "24C5049d",
+    "devices": [
+      "iPhone17,2"
+    ],
+    "filename": "1d0f3f61e94d964f5a1a3b311a248023ab40d9382fecf2288b222e4e7ba8e436.aea",
+    "key": "37oxhNX3ruzI232I8+j0IeCuVA7WV0DSWtTPmZl/6+0=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/d94b74c8-462f-4da9-94bd-be26612a3953/com_apple_MobileAsset_RecoveryOSUpdate/1d0f3f61e94d964f5a1a3b311a248023ab40d9382fecf2288b222e4e7ba8e436.aea",
+    "version": "27.3 beta 2"
   },
   {
     "build": "22A5350a",
@@ -10151,6 +10184,19 @@
     "key": "1UdW7ZL+OGHgyBkS3taCdcnj52QcmSFiUEjkwjB1wcY=",
     "url": "https://updates.cdn-apple.com/2025SummerSeed/mobileassets/062-86933/B725DDAD-CB88-4768-8978-243B18D5E301/com_apple_MobileAsset_SoftwareUpdate/2c28e8f46e0edc635e81ea8ed9fe35540d3cc9443c9b80fb97980eea2d0cc22c.aea",
     "version": "26.0 beta"
+  },
+  {
+    "build": "26C5047e",
+    "devices": [
+      "Mac17,10",
+      "Mac17,11",
+      "Mac17,12",
+      "Mac17,13"
+    ],
+    "filename": "2c78135d763f7bf8b53f69dfd23c04c7ed1189ada4dcee4699ba4fbb18352a8c.aea",
+    "key": "HrXRJTCIeiyM+61kaddOpnKxDzFtdQpf7pjVTqpfdV0=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/5eae59bf-fa11-4714-b63d-c6c0f9e27e26/com_apple_MobileAsset_MacSoftwareUpdate/2c78135d763f7bf8b53f69dfd23c04c7ed1189ada4dcee4699ba4fbb18352a8c.aea",
+    "version": "27.3 beta 2"
   },
   {
     "build": "24M5291p",
