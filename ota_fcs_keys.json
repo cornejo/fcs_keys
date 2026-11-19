@@ -1169,6 +1169,16 @@
     "version": "26.4"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,2"
+    ],
+    "filename": "00629d555ed934d7f4a0469095e88efc835de588a324a96aba42f6591dd000ef.aea",
+    "key": "syRItcEHFY/rvmTVA9waw3S6IwVdChDR+cwpspfoGb4=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/90bd7f22-475b-4690-8686-3f5ccae5abe9/com_apple_MobileAsset_SoftwareUpdate/00629d555ed934d7f4a0469095e88efc835de588a324a96aba42f6591dd000ef.aea",
+    "version": "27.3 beta 2"
+  },
+  {
     "build": "22R5348a",
     "devices": [
       "Watch6,17"
@@ -2756,6 +2766,16 @@
     "version": "26.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad15,4"
+    ],
+    "filename": "0159403158490c7745605e09c011b8606e716994239b2392060f3fe7396bd91c.aea",
+    "key": "f6Wq0EdpE7gvMggGHrUhtPHZJhwqwouOg9YakC76OzI=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/5a5e2a01-0e25-4217-932f-7f2198f73af7/com_apple_MobileAsset_SoftwareUpdate/0159403158490c7745605e09c011b8606e716994239b2392060f3fe7396bd91c.aea",
+    "version": "27.3 beta 2"
+  },
+  {
     "build": "23G90",
     "devices": [
       "iPad14,6"
@@ -4003,6 +4023,22 @@
     "key": "Gxol0S/FwbifCjkZIJrE5GbuLZRyVZSXyQHOcVA8Ot8=",
     "url": "https://updates.cdn-apple.com/2026SpringFCS/mobileassets/122-05623/E1D064CD-CC33-4F35-85B3-EF5844A722A1/com_apple_MobileAsset_SoftwareUpdate/034c66e22f12de2caf9662d746f5a4836e05b9a4cad46d9577414d671404603d.aea",
     "version": "26.4 RC"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone17,2"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "034d38b7f7cad85a94952b0a40c40c2a34754ea7ba81f0a1737a3ae6b3cadb05.aea",
+    "key": "b21M0KBtfhq6eUkpJ1uURYCHPGQ6h+GHVs++S2o/YlM=",
+    "models": [
+      "D94AP"
+    ],
+    "os": "iOS",
+    "size": 10063331328,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/7d17246e-88bf-49ec-81dd-9fa99a39832a/com_apple_MobileAsset_SoftwareUpdate/034d38b7f7cad85a94952b0a40c40c2a34754ea7ba81f0a1737a3ae6b3cadb05.aea",
+    "version": "27.3"
   },
   {
     "build": "22B83",
@@ -5605,6 +5641,19 @@
     "version": "26.4 beta 2"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad17,1",
+      "iPad17,2",
+      "iPad17,3",
+      "iPad17,4"
+    ],
+    "filename": "0828a7dd5c8e42d151bc28ed6bdbef2a5eee83d336d6592768b74c1b7e858688.aea",
+    "key": "nvID9J1PsjTwR0Wfi585NjAFtBMO5GkZddY8oDp2uCI=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/108bf173-49b1-4c56-9fde-688dcebf8187/com_apple_MobileAsset_RecoveryOSUpdate/0828a7dd5c8e42d151bc28ed6bdbef2a5eee83d336d6592768b74c1b7e858688.aea",
+    "version": "27.3 beta 2"
+  },
+  {
     "build": "23O5441g",
     "devices": [
       "RealityDevice14,1"
@@ -5935,6 +5984,22 @@
     "key": "mhr3z7s137k2ffJn+qrAIKTsjcOMvoR+WBQ3ZCyA0z8=",
     "url": "https://updates.cdn-apple.com/2026SpringFCS/mobileassets/140-26627/A1E21037-11DE-4FBB-9E1E-B4770BE45D63/com_apple_MobileAsset_RecoveryOSUpdate/09a4ed0db2cc02010f08f7ad684876e581ab699245419fd176a172e0a36896e3.aea",
     "version": "26.5.2"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,4"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "09a6c5679846e5a1e931056a16cb2313abda04d520389ff061a6ef965480cf9c.aea",
+    "key": "F8LvP2WJ+Q8z/CCHQyXGI4bTUn3YFYUc8svBAY1Gg18=",
+    "models": [
+      "D23AP"
+    ],
+    "os": "iOS",
+    "size": 10105159680,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/06520bd4-d285-46c0-9323-e6da6700bf99/com_apple_MobileAsset_SoftwareUpdate/09a6c5679846e5a1e931056a16cb2313abda04d520389ff061a6ef965480cf9c.aea",
+    "version": "27.3"
   },
   {
     "build": "23K5035d",
@@ -7385,6 +7450,22 @@
     "version": "15.5"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone17,5"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "119a6d8410afd5aa95962c91a80823d2fce827cb080981f6320607902e238e3c.aea",
+    "key": "0ImnN1O4T/qHouQAzZGrCf/GWnpXthcwJgq245pMZoA=",
+    "models": [
+      "V59AP"
+    ],
+    "os": "iOS",
+    "size": 9281634304,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/c440407b-e02b-46e0-bee8-8c91d93e2c41/com_apple_MobileAsset_SoftwareUpdate/119a6d8410afd5aa95962c91a80823d2fce827cb080981f6320607902e238e3c.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24B5099f",
     "devices": [
       "iPhone18,1"
@@ -8803,6 +8884,24 @@
     "version": "18.6 beta 2"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad13,18",
+      "iPad13,19"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "1b0f2e4762f7c3b45923fb256995a22f71f258c809e9a0aea6915d797361fa84.aea",
+    "key": "f5mP/6/TPzJKZJuq+xzX6CXps4Hm+tTJidCWwZQH0AQ=",
+    "models": [
+      "J271AP",
+      "J272AP"
+    ],
+    "os": "iOS",
+    "size": 8288702464,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/8aa8c257-c27f-4545-a5c6-91caa8c4b8ab/com_apple_MobileAsset_SoftwareUpdate/1b0f2e4762f7c3b45923fb256995a22f71f258c809e9a0aea6915d797361fa84.aea",
+    "version": "27.3"
+  },
+  {
     "build": "22J5324f",
     "devices": [
       "AudioAccessory6,1",
@@ -9517,6 +9616,22 @@
     "version": "27.2"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,5"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "22b3fb6fa0d07925143440b845e6754e6c0de701cb553f046fd00878bc99fbab.aea",
+    "key": "XkpnTuUK1tupkoIezRXgLVL7xtNktGW6UwD6PN+kQLE=",
+    "models": [
+      "V159AP"
+    ],
+    "os": "iOS",
+    "size": 10055966720,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/f90cf304-3890-4d85-b139-fc32677d4920/com_apple_MobileAsset_SoftwareUpdate/22b3fb6fa0d07925143440b845e6754e6c0de701cb553f046fd00878bc99fbab.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24S5296d",
     "devices": [
       "Watch7,13"
@@ -9702,6 +9817,22 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone15,2"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "2508d1f07709802d76d73871bc9b3a2705f34d230a88a43df20a4e467fd83c15.aea",
+    "key": "VkazjJqggLa3SvUmjIh8KiGLT9C6cJkqEffI8zjVYZY=",
+    "models": [
+      "D73AP"
+    ],
+    "os": "iOS",
+    "size": 8889503744,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/f68b59ca-d6cd-4f96-9304-8c45970a8c42/com_apple_MobileAsset_SoftwareUpdate/2508d1f07709802d76d73871bc9b3a2705f34d230a88a43df20a4e467fd83c15.aea",
+    "version": "27.3"
+  },
+  {
     "build": "23N5296b",
     "devices": [
       "RealityDevice14,1"
@@ -9762,6 +9893,18 @@
     "size": 4005933056,
     "url": "https://updates.cdn-apple.com/2026FallSeed/ce6dbaa6-cf28-43fa-963b-1391808fb2a2/com_apple_MobileAsset_SoftwareUpdate/261154ebe3ee20d861f79d3bf1380430ac65e6e2266ada306b5f4df440fc3cc8.aea",
     "version": "27.3"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone19,2",
+      "iPhone19,3",
+      "iPhone19,7"
+    ],
+    "filename": "2640486c780c7ea253c5d1d8558e0fdd3e0b29e6c5fa4ec939506d61e7dfcb39.aea",
+    "key": "BVw9j8FHgWiXs3ILGFnsiOYdUaTZPlh/2aB3nX+LyYc=",
+    "url": "https://updates.cdn-apple.com/2026FallSeed/45f9422a-5b2d-4188-a77e-a70c4678b52c/com_apple_MobileAsset_RecoveryOSUpdate/2640486c780c7ea253c5d1d8558e0fdd3e0b29e6c5fa4ec939506d61e7dfcb39.aea",
+    "version": "27.3 beta 2"
   },
   {
     "build": "22C150",
@@ -10238,6 +10381,28 @@
     "version": "27.3 beta 2"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad16,10",
+      "iPad16,11",
+      "iPad16,8",
+      "iPad16,9"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "2cb0d76eeea00e59e501224085d0b883dcb0c9a3b1a4cfdbf6f49021744c49ce.aea",
+    "key": "Dr8HvL97hWHxs5rDjuvY6Kqr02kW/OJYpudoUEoos/0=",
+    "models": [
+      "J707AP",
+      "J708AP",
+      "J737AP",
+      "J738AP"
+    ],
+    "os": "iOS",
+    "size": 9020121088,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/69339bee-54c7-4cbd-9ff0-661b0bb1fd26/com_apple_MobileAsset_SoftwareUpdate/2cb0d76eeea00e59e501224085d0b883dcb0c9a3b1a4cfdbf6f49021744c49ce.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24M5291p",
     "devices": [
       "RealityDevice17,1"
@@ -10292,6 +10457,22 @@
     "key": "eqlsyR1+4P+lykFzjqZLPhnVqzgFxUqcZ59bg/pT8mc=",
     "url": "https://updates.cdn-apple.com/2024FallSeed/mobileassets/072-05589/59C76650-ADB8-46CF-9B2B-BDE0A3C587D7/com_apple_MobileAsset_SoftwareUpdate/2d1009c0a1af1df93c810a1a42a866017fff0a54b212607052433aebae7c3326.aea",
     "version": "18.1 beta 5"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,3"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "2d4b9dc820c6f17eb3a741eb7c17327dd879ecc9da726e38530d89d2590135e0.aea",
+    "key": "MuGyHd9r/ZH0cisn5JlXiA9bJfp7pss4lXTOf4nLz/o=",
+    "models": [
+      "V57AP"
+    ],
+    "os": "iOS",
+    "size": 10250465280,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/ea20e522-3788-4f08-ad10-aec2f4826ba6/com_apple_MobileAsset_SoftwareUpdate/2d4b9dc820c6f17eb3a741eb7c17327dd879ecc9da726e38530d89d2590135e0.aea",
+    "version": "27.3"
   },
   {
     "build": "23J5279m",
@@ -11110,6 +11291,22 @@
     "version": "27.0 beta"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone17,4"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "37b8a8b9124ec1cdb3eb661afda99fbbd35555f376465ca3a609382aefdd399d.aea",
+    "key": "/ECCS6g/R29ZDf+qiPYCisYfJ5Pa1/3pbIxh9Z8th34=",
+    "models": [
+      "D48AP"
+    ],
+    "os": "iOS",
+    "size": 9970614272,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/cd47066d-d3af-4a28-aa2e-82f139949117/com_apple_MobileAsset_SoftwareUpdate/37b8a8b9124ec1cdb3eb661afda99fbbd35555f376465ca3a609382aefdd399d.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24J5353b",
     "devices": [
       "AppleTV14,1",
@@ -11151,6 +11348,44 @@
     "key": "EfRhWC2q7Efy/JrlwjmUzIrFhH2hW1IZNJvN/lRGURg=",
     "url": "https://updates.cdn-apple.com/2026WinterSeed/mobileassets/047-17284/E3FB86B5-6FFC-4DFF-8552-AC41C90235FA/com_apple_MobileAsset_RecoveryOSUpdate/386052de4a54f4789f782e648e0ef96b49b3cdd5bb3d5cd90a694d5d46521315.aea",
     "version": "26.4 beta"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPad16,3",
+      "iPad16,4",
+      "iPad16,5",
+      "iPad16,6"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "38fb36e4b80cc92fb011045d2a6e84e4eb3ab73df7fbb8eb89593e578d9d7f32.aea",
+    "key": "uTQ2Qj7g6rFy60cKgLQFAnLIWfq6Zcueb63HmSK5ODI=",
+    "models": [
+      "J717AP",
+      "J718AP",
+      "J720AP",
+      "J721AP"
+    ],
+    "os": "iOS",
+    "size": 9606864896,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/0836468c-a098-4788-bf9b-3b45c40364ba/com_apple_MobileAsset_SoftwareUpdate/38fb36e4b80cc92fb011045d2a6e84e4eb3ab73df7fbb8eb89593e578d9d7f32.aea",
+    "version": "27.3"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,1"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "3912ace184c37e8a6c3135ce07ea222fe189d96a00dc4525f601589848769d44.aea",
+    "key": "yewVGuIBg+u40jFzYEABPjhfUmrSCC/D+W7PxXSx7OM=",
+    "models": [
+      "V53AP"
+    ],
+    "os": "iOS",
+    "size": 10247507968,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/8f295e7f-d174-4e36-90cb-55305733bfb2/com_apple_MobileAsset_SoftwareUpdate/3912ace184c37e8a6c3135ce07ea222fe189d96a00dc4525f601589848769d44.aea",
+    "version": "27.3"
   },
   {
     "build": "22U95",
@@ -11496,6 +11731,28 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad14,3",
+      "iPad14,4",
+      "iPad14,5",
+      "iPad14,6"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "3e5f9b0411bd8c786f2d73cfc5fd3a2683d4716abd4f93a1be4fad47c9dec718.aea",
+    "key": "+rA3ZVlaB3OM58lSUx1mDJa6SMJw2CWDpf+FdJct/Ck=",
+    "models": [
+      "J617AP",
+      "J618AP",
+      "J620AP",
+      "J621AP"
+    ],
+    "os": "iOS",
+    "size": 8839192576,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/92805fae-6369-433d-856c-ffa73f45695f/com_apple_MobileAsset_SoftwareUpdate/3e5f9b0411bd8c786f2d73cfc5fd3a2683d4716abd4f93a1be4fad47c9dec718.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24C5037i",
     "devices": [
       "iPhone16,2"
@@ -11764,6 +12021,22 @@
     "size": 4056588288,
     "url": "https://updates.cdn-apple.com/2026FallFCS/23babb1c-b397-4286-90d8-8d1ff5c24b6b/com_apple_MobileAsset_SoftwareUpdate/427ae1a0dc64db42662fce0a5bab94fb48f54d2e755663a9fdb1915eb156ef0a.aea",
     "version": "27.2.1"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone15,3"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "427d747bd368a0b313e9d9904275b9c0f72f8504acf8bceee204f35224de7e7e.aea",
+    "key": "UNQfsKk6RvcQPRHA6UykTGFzxHr77bJPHulR6pQR6Rg=",
+    "models": [
+      "D74AP"
+    ],
+    "os": "iOS",
+    "size": 8857862144,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/d38717b8-2ffe-4e16-a5aa-0565b949f32c/com_apple_MobileAsset_SoftwareUpdate/427d747bd368a0b313e9d9904275b9c0f72f8504acf8bceee204f35224de7e7e.aea",
+    "version": "27.3"
   },
   {
     "build": "23M5290f",
@@ -12406,6 +12679,22 @@
     "key": "hJgZo9Y+vOmuougJxr1gHz6SFTqzqj+eEImXn+TJ9p0=",
     "url": "https://updates.cdn-apple.com/2025WinterSeed/mobileassets/082-01153/2719C300-6B7B-490E-8C97-912CCF91F0E3/com_apple_MobileAsset_SoftwareUpdate/4d4da2fc292ec8b933ee0be5a900496e2e2196a56d319407b34db1043523ad50.aea",
     "version": "18.4 beta 3"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone14,8"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "4d884b3be29af5c12bcfa3d22170fc6596b5aaea97f97cc356627dcf1c52c5a0.aea",
+    "key": "xzWYZoevdR4PvJ55rtuZvF7Rnb2ht4DwHLBWz1/i2aA=",
+    "models": [
+      "D28AP"
+    ],
+    "os": "iOS",
+    "size": 8752537600,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/3387d291-acdd-403b-b6cd-2ef4c84483c8/com_apple_MobileAsset_SoftwareUpdate/4d884b3be29af5c12bcfa3d22170fc6596b5aaea97f97cc356627dcf1c52c5a0.aea",
+    "version": "27.3"
   },
   {
     "build": "23A8464",
@@ -13345,6 +13634,28 @@
     "version": "27.2.1"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad14,10",
+      "iPad14,11",
+      "iPad14,8",
+      "iPad14,9"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "6131f7b75889dabaf7b9beaf96b9a26f864071a5e21320dbc12a310a56133630.aea",
+    "key": "6qCSYOM9IO//qPsmdYyijYd4/7quhiAj/mTEil1V/3w=",
+    "models": [
+      "J507AP",
+      "J508AP",
+      "J537AP",
+      "J538AP"
+    ],
+    "os": "iOS",
+    "size": 9019994112,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/8c79e02b-f0df-40a0-a9cd-338ed0f43e8d/com_apple_MobileAsset_SoftwareUpdate/6131f7b75889dabaf7b9beaf96b9a26f864071a5e21320dbc12a310a56133630.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24M5361a",
     "devices": [
       "RealityDevice17,1"
@@ -13895,6 +14206,28 @@
     "key": "z395R9Gyla+G6FyCX1KnGXe0EP2J5hF2PDCI2NGx/2Y=",
     "url": "https://updates.cdn-apple.com/2025FallSeed/mobileassets/089-14703/4D78F76E-A5EC-4A14-8E8D-92CFE2500705/com_apple_MobileAsset_SoftwareUpdate/6c1211f6e5c69ee9127b58bec042ef4efca3215ecf3f33711718470c4df0bdaf.aea",
     "version": "26.2 beta 2"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPad17,1",
+      "iPad17,2",
+      "iPad17,3",
+      "iPad17,4"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "6c2a6c45951c26ea87e383f247c0a0e94a418a1ff61426349651b16a2eff1161.aea",
+    "key": "4fp8MuHWu63spjfcEJ6kcjroxycPAqn1XvAahIzTNTY=",
+    "models": [
+      "J817AP",
+      "J818AP",
+      "J820AP",
+      "J821AP"
+    ],
+    "os": "iOS",
+    "size": 9192857600,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/cf712ce2-add7-424a-b577-990950d946ac/com_apple_MobileAsset_SoftwareUpdate/6c2a6c45951c26ea87e383f247c0a0e94a418a1ff61426349651b16a2eff1161.aea",
+    "version": "27.3"
   },
   {
     "build": "24K122",
@@ -14474,6 +14807,22 @@
     "version": "26.6 beta 3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad15,7"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "7945df75157121e32bdbfb307467a70fb752d02e529ac51fa85cddf102e9526b.aea",
+    "key": "lTydgfqi7HjXDce1sjCOXnHtKlMAJULfa4RwIO+M2KQ=",
+    "models": [
+      "J481AP"
+    ],
+    "os": "iOS",
+    "size": 8048046080,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/bf679ea4-7e90-499f-a24d-7d9abaad271d/com_apple_MobileAsset_SoftwareUpdate/7945df75157121e32bdbfb307467a70fb752d02e529ac51fa85cddf102e9526b.aea",
+    "version": "27.3"
+  },
+  {
     "build": "22U95",
     "devices": [
       "Watch6,15"
@@ -14873,6 +15222,26 @@
     "version": "2.4 RC"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone19,2",
+      "iPhone19,3",
+      "iPhone19,7"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "84c69a2d9d1d9078e0782f269c3c5aa3b528cd70c0a15094a41d4a291bfd2b02.aea",
+    "key": "VrujLwpfKN512k8cWP6GFKNrn8/XmpLwh4d9oW1Bqvc=",
+    "models": [
+      "V63AP",
+      "V64AP",
+      "V64sAP"
+    ],
+    "os": "iOS",
+    "size": 11035602944,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/12edfb42-ea96-4f82-987f-cc56024a0c7a/com_apple_MobileAsset_SoftwareUpdate/84c69a2d9d1d9078e0782f269c3c5aa3b528cd70c0a15094a41d4a291bfd2b02.aea",
+    "version": "27.3"
+  },
+  {
     "build": "22U95",
     "devices": [
       "Watch7,9"
@@ -14961,6 +15330,22 @@
     "size": 2593427456,
     "url": "https://updates.cdn-apple.com/2026FallFCS/a5c16148-2a75-418b-95db-eba058035b45/com_apple_MobileAsset_SoftwareUpdate/86da9b563520601acb9b4a72c046e332e48d97b599dff1d52c5fd04580aef9ee.aea",
     "version": "27.2"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone16,1"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "86eb6060ae4cedb4b6ee6e35f9d4d6e0484986ff343e9405932e75c5c2465f1f.aea",
+    "key": "ARYhja6ff6opFigDUaYN2WSSvamyzpbmF6Ps6mkKzIs=",
+    "models": [
+      "D83AP"
+    ],
+    "os": "iOS",
+    "size": 9466875904,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/d7af1414-8beb-4c68-b172-97982ea87b5b/com_apple_MobileAsset_SoftwareUpdate/86eb6060ae4cedb4b6ee6e35f9d4d6e0484986ff343e9405932e75c5c2465f1f.aea",
+    "version": "27.3"
   },
   {
     "build": "23L772",
@@ -15256,6 +15641,24 @@
     "os": "iOS",
     "size": 4072099840,
     "url": "https://updates.cdn-apple.com/2026FallSeed/862c4daf-559a-4a2c-aec3-23edd1e11e5d/com_apple_MobileAsset_SoftwareUpdate/8b82b8d20cab3810360e938e5548a977c6eee7f65f01270c5b181625170e4cd7.aea",
+    "version": "27.3"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPad16,1",
+      "iPad16,2"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "8c462b3959cdd3ed5055cce925e4e31d2ed3677abc40fff9173183db18637ba7.aea",
+    "key": "dLfnaZJylDyOfLCdOE1SDnFLMT2voWUfC39ZxIYlyi8=",
+    "models": [
+      "J410AP",
+      "J411AP"
+    ],
+    "os": "iOS",
+    "size": 8974249984,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/16651df1-341b-4963-9c68-2d4f419b686b/com_apple_MobileAsset_SoftwareUpdate/8c462b3959cdd3ed5055cce925e4e31d2ed3677abc40fff9173183db18637ba7.aea",
     "version": "27.3"
   },
   {
@@ -15819,6 +16222,22 @@
     "version": "27.2.1"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPad15,8"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "9c8c3fd731c0baf0426c09657a497e3e716fc63983b22e930b5fb81309bc7a71.aea",
+    "key": "Jsxb7k/i0QrNhUUSs7CWXs7/THY5SczEHh+8WiKotRA=",
+    "models": [
+      "J482AP"
+    ],
+    "os": "iOS",
+    "size": 8339812352,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/e5e29f25-1566-4cbe-b1a8-fbb7c43a5e43/com_apple_MobileAsset_SoftwareUpdate/9c8c3fd731c0baf0426c09657a497e3e716fc63983b22e930b5fb81309bc7a71.aea",
+    "version": "27.3"
+  },
+  {
     "build": "22N5267g",
     "devices": [
       "RealityDevice14,1"
@@ -16205,6 +16624,22 @@
     "version": "27.2.1"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone14,7"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "a2a8adad191ea73ab5a5da85b33335ab400d52bacb51d4a8e9e2786297911e41.aea",
+    "key": "+/704czLKqkh9wK7JKnWD/RHXm5ngDqE9IjyN0OKArQ=",
+    "models": [
+      "D27AP"
+    ],
+    "os": "iOS",
+    "size": 8756334592,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/9516615c-2f8c-4b0a-bdd3-e2356be1b6d5/com_apple_MobileAsset_SoftwareUpdate/a2a8adad191ea73ab5a5da85b33335ab400d52bacb51d4a8e9e2786297911e41.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24S132",
     "devices": [
       "Watch8,4"
@@ -16464,6 +16899,22 @@
     "size": 3582509056,
     "url": "https://updates.cdn-apple.com/2026FallFCS/2cac1fbd-1f8e-425d-8d5d-54486282635e/com_apple_MobileAsset_SoftwareUpdate/ac09e97a14f364b5497f0993b75eae908051b6061e1ba539003cbc38e8823f49.aea",
     "version": "27.2.1"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone15,5"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "ac6930a46784bda4f234ad6eae6a501a9c7d7e5343bf6b80ebd22a1363eeb03d.aea",
+    "key": "ko3ZGKLK5TBsDvM8dXTA/5jAFdCJHHaQoj+Vz+DPB9c=",
+    "models": [
+      "D38AP"
+    ],
+    "os": "iOS",
+    "size": 8839847936,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/9b890230-edad-4f09-ba88-91d92f89e77f/com_apple_MobileAsset_SoftwareUpdate/ac6930a46784bda4f234ad6eae6a501a9c7d7e5343bf6b80ebd22a1363eeb03d.aea",
+    "version": "27.3"
   },
   {
     "build": "23L5234a",
@@ -16783,6 +17234,22 @@
     "version": "26.4 RC"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone18,2"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "b2487b2b8b44f6bc7c53903d6ef29e5b9004cc3c359d3e91b953e4735e7f42c5.aea",
+    "key": "DfC3+3xDEGR8CmEwVde9V486wurs6zyY0E9njF5CQ18=",
+    "models": [
+      "V54AP"
+    ],
+    "os": "iOS",
+    "size": 10238849024,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/b9f61754-11d1-4408-983a-382c598e6abf/com_apple_MobileAsset_SoftwareUpdate/b2487b2b8b44f6bc7c53903d6ef29e5b9004cc3c359d3e91b953e4735e7f42c5.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24C5049d",
     "devices": [
       "iPhone16,2"
@@ -17092,6 +17559,22 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone15,4"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "ba5df1f76c383c56d75cadcef40903a2fb3efd0c93038b7983133ad16f7ddd0a.aea",
+    "key": "8FzzHGiAhVovAi2hc+VKKlb2yFAE2deFydEiQYLFAPI=",
+    "models": [
+      "D37AP"
+    ],
+    "os": "iOS",
+    "size": 8838017024,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/dc696754-7ad7-4929-821d-ac6b1aa01fbf/com_apple_MobileAsset_SoftwareUpdate/ba5df1f76c383c56d75cadcef40903a2fb3efd0c93038b7983133ad16f7ddd0a.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24B156",
     "devices": [
       "iPad15,7"
@@ -17106,6 +17589,28 @@
     "size": 7948464128,
     "url": "https://updates.cdn-apple.com/2026FallFCS/c3baa732-240a-41c3-9f13-8360dcc00584/com_apple_MobileAsset_SoftwareUpdate/baece9b8e94e10f1db04bc4e99322a2c7208617cc09b9ddf4ba069c88ddbf98d.aea",
     "version": "27.2.1"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPad15,3",
+      "iPad15,4",
+      "iPad15,5",
+      "iPad15,6"
+    ],
+    "documentation_id": "iPadOS273Beta2",
+    "filename": "bafb83f113e5e9d1bcf83866f467c236f9d97e11b600ac36cf16a37e0628799e.aea",
+    "key": "+gsrJLoEHuev771TwzYNffOdwNvF7FnMtlcGRfRr2ps=",
+    "models": [
+      "J607AP",
+      "J608AP",
+      "J637AP",
+      "J638AP"
+    ],
+    "os": "iOS",
+    "size": 8981794816,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/03d15f02-bab7-4912-aff7-a360a2fdc8b0/com_apple_MobileAsset_SoftwareUpdate/bafb83f113e5e9d1bcf83866f467c236f9d97e11b600ac36cf16a37e0628799e.aea",
+    "version": "27.3"
   },
   {
     "build": "24K157",
@@ -18076,6 +18581,22 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone16,2"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "daef5871ba2c905dc63b1ba058b0bf3376fa6add0c04f3e6f0c26d3bee849430.aea",
+    "key": "alVA6jThlnLvEAFHzg5L8jxoomO+bZd+aGxbgRW6fO4=",
+    "models": [
+      "D84AP"
+    ],
+    "os": "iOS",
+    "size": 9469460480,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/e0a0a2ce-dca1-4007-a817-86b4cbac4378/com_apple_MobileAsset_SoftwareUpdate/daef5871ba2c905dc63b1ba058b0bf3376fa6add0c04f3e6f0c26d3bee849430.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24K157",
     "devices": [
       "AppleTV14,1"
@@ -18749,6 +19270,38 @@
     "version": "27.3"
   },
   {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone19,4"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "eb8c571203d64666cdc81533a3a9e64b074404d1efbbcc9dadc378945569c553.aea",
+    "key": "+QyHrrSYDQZ4e+vC3TXDENcdNzxWw6SnBZd+7dhcpyw=",
+    "models": [
+      "V68AP"
+    ],
+    "os": "iOS",
+    "size": 11283283968,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/5cb84d99-fdfd-4c25-92db-4381bf140084/com_apple_MobileAsset_SoftwareUpdate/eb8c571203d64666cdc81533a3a9e64b074404d1efbbcc9dadc378945569c553.aea",
+    "version": "27.3"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone17,3"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "ebf497f676d520b8c208059f4d2142d4e6ed1c0693e17b2447027d2d8ef89cff.aea",
+    "key": "DhKyvJ1pjQorlkVCvQ7djMrJdkhSci/QFWeTb5skfKY=",
+    "models": [
+      "D47AP"
+    ],
+    "os": "iOS",
+    "size": 10003234816,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/265f0b89-dba8-42bf-96e4-beab3a65c2be/com_apple_MobileAsset_SoftwareUpdate/ebf497f676d520b8c208059f4d2142d4e6ed1c0693e17b2447027d2d8ef89cff.aea",
+    "version": "27.3"
+  },
+  {
     "build": "24K6122",
     "devices": [
       "AppleTV14,1"
@@ -18849,6 +19402,22 @@
     "size": 4010995712,
     "url": "https://updates.cdn-apple.com/2026FallFCS/1cb358db-6c07-475b-948c-d0b76f5f82a6/com_apple_MobileAsset_SoftwareUpdate/eff22051fb1457438166e843b2273012eee48e728ba8954223d44e6697741802.aea",
     "version": "27.2.1"
+  },
+  {
+    "build": "24C5049f",
+    "devices": [
+      "iPhone17,1"
+    ],
+    "documentation_id": "iOS273Beta2",
+    "filename": "f02c9dbc8a42ddfe471412ee5ef0bf78f613819b8ddedd41103a351a10bf7bfd.aea",
+    "key": "Pu3x5y5eG3ieJe43y1DYyZjR+hRUV0l3fDv1IVIKPmw=",
+    "models": [
+      "D93AP"
+    ],
+    "os": "iOS",
+    "size": 10061328384,
+    "url": "https://updates.cdn-apple.com/2026FallSeed/42f5461e-74d6-49be-be5e-a43fc69386f9/com_apple_MobileAsset_SoftwareUpdate/f02c9dbc8a42ddfe471412ee5ef0bf78f613819b8ddedd41103a351a10bf7bfd.aea",
+    "version": "27.3"
   },
   {
     "build": "22U95",
